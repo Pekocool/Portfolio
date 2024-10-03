@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petter Køltzow | Service Design Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <!-- AOS CSS for animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Add this inside the <body> tag, above all other sections -->
+<nav class="navbar">
+  <div class="nav-wrapper">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#double-diamond">The Double Diamond</a></li> <!-- Added Double Diamond link -->
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section id="hero" data-aos="fade-in">
+    <div class="hero-content">
+      <h1 data-aos="zoom-in">Petter Køltzow</h1>
+      <p data-aos="zoom-in" data-aos-delay="200">A Service Design portfolio</p>
+      <div class="scroll-down" data-aos="fade-up" data-aos-delay="400">
+        <p>Scroll down to start the journey</p>
+        <img src="images/arrow.png" alt="Scroll down arrow">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="about-wrapper">
+      <div class="about-text" data-aos="fade-right">
+        <h2>About Me</h2>
+        <p>I’m Petter Køltzow, a service design student at Kristiania University College. I combine creative thinking with human-centered design principles to craft solutions that don’t just meet today’s needs, but anticipate tomorrow’s challenges. Design should be functional, beautiful, and impactful, and I strive to achieve this with every project.</p>
+      </div>
+      <div class="about-photo" data-aos="fade-left">
+        <img src="images/About.jpg" alt="Photo of Petter Køltzow" />
+      </div>
+    </div>
+  </section>
+
+  <section id="passions">
+    <div class="passion-items">
+      <!-- First Line: Image first, then text -->
+      <div class="passion-item" data-aos="fade-right" data-aos-delay="100">
+        <div class="image-placeholder"></div>
+        <div class="text-box">
+          <h3>Solving Wicked Problems</h3>
+          <p>One of my greatest strengths within the service design profession is my ability and commitment to solving wicked problems</p>
+        </div>
+      </div>
+      
+      <!-- Second Line: Text first, then image -->
+      <div class="passion-item" data-aos="fade-left" data-aos-delay="200">
+        <div class="text-box">
+          <h3>Thinking Outside The Box</h3>
+          <p>For the coming generations to have a future, change must occur either by design or disaster. I vote for doing it through design and i therefore have a passion for thinking new and outside the box.</p>
+        </div>
+        <div class="image-placeholder"></div>
+      </div>
+      
+      <!-- Third Line: Image first, then text -->
+      <div class="passion-item" data-aos="fade-right" data-aos-delay="300">
+        <div class="image-placeholder"></div>
+        <div class="text-box">
+          <h3>Always Challenging Myself</h3>
+          <p>To think new, one must dare to challenge the current standard of what is possible and what is not possible. That's why I love to explore the unexplored, and take every challenge I get head on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Double Diamond Section (now on the Home Page) -->
+<section id="double-diamond" data-aos="fade-up">
+  <div class="diamond-explanation">
+    <h2>The Double Diamond Model</h2>
+    <p>Hover over each phase of the Double Diamond to learn more about each step in the process.</p>
+    <div class="diamond-container">
+      <!-- Double Diamond Image -->
+      <img src="images/dd.png" alt="Double Diamond Model" class="double-diamond-image">
+      
+      <!-- Hover Areas for Phases -->
+      <div class="hover-area discover-area" data-hover="Discover: This phase is about exploring and gathering insights to understand the problem space."></div>
+      <div class="hover-area define-area" data-hover="Define: In this phase, insights are synthesized to clearly define the problem."></div>
+      <div class="hover-area develop-area" data-hover="Develop: Concepts and ideas are generated and prototyped during this phase."></div>
+      <div class="hover-area deliver-area" data-hover="Deliver: The solution is tested and refined, leading to implementation."></div>
+    </div>
+
+    <!-- Static Tooltip -->
+    <div id="diamond-tooltip" class="diamond-tooltip">Hover over the phases to see descriptions</div>
+  </div>
+</section>
+
+<script>
+  const diamondPhases = document.querySelectorAll('.hover-area');
+  const tooltip = document.getElementById('diamond-tooltip');
+
+  diamondPhases.forEach(phase => {
+    phase.addEventListener('mouseenter', (e) => {
+      const hoverText = e.target.getAttribute('data-hover');
+      tooltip.innerText = hoverText;
+      tooltip.classList.add('show'); // Show the tooltip
+    });
+
+    phase.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('show'); // Hide the tooltip
+    });
+  });
+</script>
+
+  <section id="projects">
+    <h2 data-aos="fade-up">My Design Journey</h2>
+    <div class="projects-gallery">
+      <a href="project1.html" class="project-card" id="project1" data-aos="fade-up" data-aos-duration="800">
+        <div class="image-section"></div>
+        <div class="text-section">
+          <h3>User Journeys</h3>
+          <p class="project-description">User-centered design in retail, focusing on customer engagement strategies.</p>
+        </div>
+      </a>
+      <a href="project2.html" class="project-card" id="project2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+        <div class="image-section"></div>
+        <div class="text-section">
+          <h3>Scenario Development</h3>
+          <p class="project-description">Innovating sustainable service systems in urban environments.</p>
+        </div>
+      </a>
+      <a href="project3.html" class="project-card" id="project3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <div class="image-section"></div>
+        <div class="text-section">
+          <h3>Strategic Design</h3>
+          <p class="project-description">Improving customer experience through digital transformation strategies.</p>
+        </div>
+      </a>
+      <a href="project4.html" class="project-card" id="project4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+        <div class="image-section"></div>
+        <div class="text-section">
+          <h3>New Airbnb Service?</h3>
+          <p class="project-description">Service design in healthcare for better patient outcomes and engagement.</p>
+        </div>
+      </a>
+      <a href="project5.html" class="project-card" id="project5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        <div class="image-section"></div>
+        <div class="text-section">
+          <h3>First Service Design Project</h3>
+          <p class="project-description">Public transportation redesign to enhance accessibility and inclusivity.</p>
+        </div>
+      </a>
+      <a href="project6.html" class="project-card" id="project6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+        <div class="image-section"></div>
+        <div class="text-section">
+          <h3>Animation</h3>
+          <p class="project-description">Exploring the intersection of design and sustainability in modern urban planning.</p>
+        </div>
+      </a>
+    </div>
+  </section>  
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 data-aos="fade-up">Let’s Connect and Create</h2>
+    <div class="contact-links" data-aos="fade-up" data-aos-delay="100">
+      <p><a href="mailto:your-email@example.com">Email Me</a></p>
+      <p><a href="https://www.linkedin.com/in/yourprofile" target="_blank">Connect on LinkedIn</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Petter Køltzow. Let's make things happen.</p>
+  </footer>
+
+  <!-- AOS Script for animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200, // Animation duration in ms
+      once: false // Allow animations to repeat when scrolling back up
+    });
+  </script>
+</body>
+</html>

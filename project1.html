@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Journeys | Project 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project1.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+
+  <!-- Project Nav Bar -->
+  <nav class="navbar">
+    <div class="nav-wrapper">
+      <ul class="nav-links">
+        <li><a href="index.html">Back to Main Page</a></li>
+        <li style="margin-left: auto;"><a href="projects.html">More Projects</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Intro Section -->
+  <section id="intro" data-aos="fade-in">
+    <h1>User Journeys</h1>
+    <p>User journeys have been useful for me to illustrate what makes a service good or bad. They tell a story about what works or doesn't work with a service, in addition to the context the user is in.</p>
+  </section>
+
+<!-- First User Journey Section -->
+<section class="user-journey" data-aos="fade-up">
+    <div class="journey-content">
+      <img src="images/Brukerreise3.png" alt="User Journey 1" class="journey-image">
+      <div class="journey-text">
+        <h2>Tinder User Journey</h2>
+        <p>I was tasked with creating a user journey, which would address what a new service for Tinder would look like.</p>
+        <p>
+            The first thing I thought of was what the road would look like. I went for the heart/love theme, and therefore thought that the road could be a heart. Where the heart descends, it goes badly, and where it rises, it goes better.</p>
+        <p>I used icons to express how the main character felt. To explain more in depth about what was going on, I used text boxes.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Second User Journey Section (text first) -->
+  <section class="user-journey" data-aos="fade-up" data-aos-delay="100">
+    <div class="journey-content">
+      <div class="journey-text">
+        <h2>Chindogu User Journey</h2>
+        <p>I created this user journey to illustrate how a product I created could work in practice.</p>
+        <p>I went for a slightly different style on this one, compared to the Tinder user journey. I think the style I use here is a little more clear, as it is divided into clear phases, and uses emojis to express the feelings along the way.</p>
+      </div>
+      <img src="images/brukerreise.png" alt="User Journey 2" class="journey-image">
+    </div>
+  </section>  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200, // Duration of animations
+      once: false,    // Allow animations to trigger again when scrolling up
+      mirror: true    // Animations triggered when scrolling up
+    });
+  </script>
+</body>
+</html>
